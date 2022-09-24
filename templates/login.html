@@ -1,0 +1,20 @@
+
+{% extends 'bootstrap/base.html' %}
+{% import "bootstrap/wtf.html" as pepe %}
+	{% block title %}Login{% endblock %}
+
+	{% block content %}
+
+
+        <div class="container">
+		<h1>Login</h1>
+<!--        <form method="post", action="{{url_for('login')}}" novalidate>-->
+<!--            {{ form.csrf_token }}-->
+<!--          {{form.email.label}}{{form.email(size=30)}}-->
+<!--           {{form.password.label}}{{form.password(size=30)}}-->
+<!--             {{form.submit}}-->
+<!--        </form>-->
+        <!-- This is where our form will go. -->
+            {{ pepe.quick_form(form) }}
+        </div>
+    {% endblock %}
