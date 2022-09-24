@@ -1,6 +1,6 @@
 #Create a Login form with FlaskForm
 
-###The end result : [https://github.com/CiscoRostam/login-with-Flask.git](https://github.com/CiscoRostam/login-with-Flask)
+*The end result : [https://github.com/CiscoRostam/login-with-Flask.git](https://github.com/CiscoRostam/login-with-Flask)
 
 References:
     * [Flask-WTF](https://flask-wtf.readthedocs.io/en/1.0.x/)
@@ -8,40 +8,41 @@ References:
 
 Learning objectives:
 
-    * Use Python virtual environments in PyCharm Community Edition IDE
-    * Use git to check out source from a code repository and move between branches
-    * Create a web application login form using python, flask, FlaskForm(with validators), Template Inheritance with
-      Jinja2 and flask_bootstrap.
+   * Use Python virtual environments in PyCharm Community Edition IDE
+   * Use git to check out source from a code repository and move between branches
+   * Create a web application login form using python, flask, FlaskForm(with validators), Template Inheritance with
+     Jinja2 and flask_bootstrap.
 
 
 **Install [Flask-WTF](https://flask-wtf.readthedocs.io/en/1.0.x/install/#development)**
-    * pip install -U Flask-WTF
+* pip install -U Flask-WTF
 
-###Challenge 1: Create a route “/login” that when the user clicks on “Login” will open the ‘login.html’
+**Challenge 1: Create a route “/login” that when the user clicks on “Login” will open the ‘login.html’**
 
-    * Create an app decorator routed with “/login”
+   * Create an app decorator routed with “/login”
 
-    * Create a login function that rende the “login.html” template. 
+   * Create a login function that render the “login.html” template. 
 
-    * Add an [url_for()](https://tedboy.github.io/flask/generated/flask.url_for.html) mapped to ‘login’ function in the anchor <a> tag, like this when the user clicks on Login  
+   * Add an [url_for()](https://tedboy.github.io/flask/generated/flask.url_for.html) mapped to ‘login’ function in the anchor <a> tag, like this when the user clicks on Login  
       button the user will be redirect to ‘login.html’
 
-    Refresh the browser and click on the Login button.     
+   Refresh the browser and click on the Login button.     
 
 
 
-###Challenge 2:  In main.py create a Form with WTForm([FlaskForm](https://flask-wtf.readthedocs.io/en/0.15.x/form/))
+**Challenge 2:  In main.py create a Form with WTForm([FlaskForm](https://flask-wtf.readthedocs.io/en/0.15.x/form/))**
 
-    * Install flask_wtf and wtforms:
-    `from flask_wtf import FlaskForm
-     from wtforms import StringField,SubmitField`
+  * Install flask_wtf and wtforms:
+    `from flask_wtf import FlaskForm`
+    `from wtforms import StringField,SubmitField`
 
 
-    * Create a class object call LoginForm that inherits from class FlaskForm and define the fields in the form with wtforms class variables :
-`	  class LoginForm(FlaskForm):
-         email = StringField(label='email')
-         password = StringField(label='password')
-         submit = SubmitField(label='Log')`
+  * Create a class object call LoginForm that inherits from class FlaskForm and define the fields in the form with 
+    wtforms class variables :
+`	   class LoginForm(FlaskForm):`
+         `email = StringField(label='email')`
+         `password = StringField(label='password')`
+        `` submit = SubmitField(label='Log')``
 	
 ###By default, WTForm  protects all forms against [Cross-Site Request Forgery (CSRF)](https://flask-wtf.readthedocs.io/en/1.0.x/csrf/#html-forms) attacks. To implement CSRF protection.
 	 `  app = Flask(__name__)
