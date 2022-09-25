@@ -19,7 +19,7 @@ Learning objectives:
 
 **Challenge 1: Create a route “/login” that when the user clicks on “Login” will open the ‘login.html’**
 
-   * Create an app decorator routed with “/login”
+   * Create an app decorator route with “/login”
 
    * Create a login function that render the “login.html” template. 
 
@@ -33,8 +33,8 @@ Learning objectives:
 **Challenge 2:  In main.py create a Form with WTForm([FlaskForm](https://flask-wtf.readthedocs.io/en/0.15.x/form/))**
 
   * Install flask_wtf and wtforms:
-    `from flask_wtf import FlaskForm`
-    `from wtforms import StringField,SubmitField`
+   ```from flask_wtf import FlaskForm
+      from wtforms import StringField,SubmitField```
 
 
   * Create a class object call LoginForm that inherits from class FlaskForm and define the fields in the form with 
