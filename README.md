@@ -33,13 +33,17 @@ Learning objectives:
 **Challenge 2:  In main.py create a Form with WTForm([FlaskForm](https://flask-wtf.readthedocs.io/en/0.15.x/form/))**
 
 * Install flask_wtf and wtforms:
-   `from flask_wtf import FlaskForm
-      from wtforms import StringField,SubmitField`
+   
+
+    `from flask_wtf import FlaskForm
+     from wtforms import StringField,SubmitField`
 
 
   * Create a class object call LoginForm that inherits from class FlaskForm and define the fields in the form with 
     wtforms class variables :
-  `class LoginForm(FlaskForm):
+  
+   
+    `class LoginForm(FlaskForm):
          email = StringField(label='email')
          password = StringField(label='password')
          submit = SubmitField(label='Log')`
@@ -67,7 +71,7 @@ Learning objectives:
           {{ form.email.label}}<br>{{ form.email(size=20) }}<br>
           {{ form.password.label }}<br>{{ form.password(size=20) }}<br>
           {{ form.submit }}
-         </form>``` 
+          </form>``` 
 
 **HTTP Methods: To establish communication between the user and the servers, Flask routing decorator uses 
 methods=[‘GET’,’POST’]. GET methods are by default in @app.route(). For security reasons we do POST requests when the
@@ -79,6 +83,7 @@ user  provides information to the server.**
        
 
      `@app.route("/login", methods=['GET','POST'])
+      
       def login():`
 
    * Add method POST to form tag in login.html file
@@ -118,15 +123,16 @@ there is no minimum and maximum amount of characters for the password.**
    * Establish a condition in the login function that if the data from the form  is [validate_on_submit()](https://flask-wtf.readthedocs.io/en/0.15.x/quickstart/).printed
      the user email in the console. 
 
-       `@app.route("/login", methods=['GET','POST'])
-          def login():
-             form = LoginForm()
-             if form.validate_on_submit():
+      
+     `@app.route("/login", methods=['GET','POST'])
+      def login():
+            form = LoginForm()
+            if form.validate_on_submit():
                  print(form.email.data)
 
-             return render_template('login.html',form=form)`
+            return render_template('login.html',form=form)`
 
-   * Add to  <form> the data from must be given action with and endpoint to redirect the data to the login function using Jinja2 {{ url_for() }}
+   * Add to  `<form>` the data from must be given action with and endpoint to redirect the data to the login function using Jinja2 {{ url_for() }}
     
     ` <form method="post" action="{{url_for('login')}}">`
 
@@ -179,7 +185,6 @@ First we have to look at [Template Inheritance with Jinja2](https://flask.pallet
    RUN the app to notice that there is no change on the website.
 
 
-
 ###Challenge: Render the app with Bootstrap
 
  **Follow  [Flask-Bootstrap documentation  instructions](https://pythonhosted.org/Flask-Bootstrap/basic-usage.html#):** 
@@ -197,11 +202,11 @@ First we have to look at [Template Inheritance with Jinja2](https://flask.pallet
 _**For next time  rather than type the whole code in <form> tag, there is a [WTForms support in Flask_Bootstrap](https://pythonhosted.org/Flask-Bootstrap/forms.html) that just
 with one line of code the LoginForm is rendered in the login.html template.**_
 
-   * Challenge: Uncoment `<form> </form>` and replaced the form with ‘wtf.quick_form’
+   * Challenge: Uncomment all the code inside `<form> </form>` and replaced the form with ‘wtf.quick_form’
 
    * Import the bootstrap/wtf.html at the top of login.html
         `{% import "bootstrap/wtf.html" as wtf %}`
 
-   * After the uncomment `<form></form>` tag. Type: `{{ wtf.quick_form(form) }}`
+   * Below to uncomment `<form></form>` tag. Type: `{{ wtf.quick_form(form) }}`
 
    Refresh the browser and see the result.
