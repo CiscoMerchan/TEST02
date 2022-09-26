@@ -32,14 +32,14 @@ Learning objectives:
 
 **Challenge 2:  In main.py create a Form with WTForm([FlaskForm](https://flask-wtf.readthedocs.io/en/0.15.x/form/))**
 
-  * Install flask_wtf and wtforms:
-   ```from flask_wtf import FlaskForm```
-   ```from wtforms import StringField,SubmitField```
+* Install flask_wtf and wtforms:
+   ```from flask_wtf import FlaskForm
+      from wtforms import StringField,SubmitField```
 
 
   * Create a class object call LoginForm that inherits from class FlaskForm and define the fields in the form with 
     wtforms class variables :
-`	  ```class LoginForm(FlaskForm):
+  ```class LoginForm(FlaskForm):
          email = StringField(label='email')
          password = StringField(label='password')
          submit = SubmitField(label='Log')```
