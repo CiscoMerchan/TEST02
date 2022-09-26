@@ -51,19 +51,21 @@ Learning objectives:
 ###Challenge :  Render  the LoginForm on login.html template
 
   * Create an object of LoginForm to pass as an argument in render_template() with a key/value pair.
+      
       ```@app.route("/login")
          def login():
          form = LoginForm()
 
          return render_template('login.html',form=form)```
 
-  * Render form in login.html
-    ```<form >
-        {{ form.csrf_token }}
-        {{ form.email.label}}<br>{{ form.email(size=20) }}<br>
-        {{ form.password.label }}<br>{{ form.password(size=20) }}<br>
-        {{ form.submit }}
-       </form>``` 
+    * Render form in login.html
+    
+          ```<form >
+          {{ form.csrf_token }}
+          {{ form.email.label}}<br>{{ form.email(size=20) }}<br>
+          {{ form.password.label }}<br>{{ form.password(size=20) }}<br>
+          {{ form.submit }}
+         </form>``` 
 
 **HTTP Methods: To establish communication between the user and the servers, Flask routing decorator uses 
 methods=[‘GET’,’POST’]. GET methods are by default in @app.route(). For security reasons we do POST requests when the
