@@ -37,7 +37,8 @@ Learning objectives:
 
 * Install flask_wtf and wtforms:
    
-   ```from flask_wtf import FlaskForm
+   ```
+      from flask_wtf import FlaskForm
       from wtforms import StringField,SubmitField```
 
 
