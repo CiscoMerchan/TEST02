@@ -79,7 +79,7 @@ Learning objectives:
 methods=[‘GET’,’POST’]. GET methods are by default in @app.route(). For security reasons we do POST requests when the
 user  provides information to the server.**
 
-#Challenge :  Add method POST
+**Challenge :  Add method POST**
 
   * Add method POST to @app.route(‘/login’)
        
@@ -120,21 +120,22 @@ there is no minimum and maximum amount of characters for the password.**
 
    RUN the code to verify if the data entries are valid.
 
-#Challenge: Print user email in the console.
+**Challenge: Print user email in the console.**
 
-   * Establish a condition in the login function that if the data from the form  is [validate_on_submit()](https://flask-wtf.readthedocs.io/en/0.15.x/quickstart/).printed
-     the user email in the console. 
+  * Establish a condition in the login function that if the data from the form  is [validate_on_submit()](https://flask-wtf.readthedocs.io/en/0.15.x/quickstart/).printed
+    the user email in the console. 
 
       
-     `@app.route("/login", methods=['GET','POST'])
-      def login():
+     ```
+        @app.route("/login", methods=['GET','POST'])
+        def login():
             form = LoginForm()
             if form.validate_on_submit():
                  print(form.email.data)
 
-            return render_template('login.html',form=form)`
+            return render_template('login.html',form=form)```
 
-   * Add to  `<form>` the data from must be given action with an endpoint to redirect the data to the login function using Jinja2 {{ url_for() }}
+  * Add to  `<form>` the data from must be given action with an endpoint to redirect the data to the login function using Jinja2 {{ url_for() }}
     
     ` <form method="post" action="{{url_for('login')}}">`
 
