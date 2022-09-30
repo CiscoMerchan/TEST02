@@ -66,7 +66,7 @@ Learning objectives:
 
            return render_template('login.html',form=form)```
 
-    * Render form in login.html
+  * Render form in login.html
     
           ```<form >
           {{ form.csrf_token }}
