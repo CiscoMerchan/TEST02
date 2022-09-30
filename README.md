@@ -81,17 +81,17 @@ user  provides information to the server.**
 
 #Challenge :  Add method POST
 
-   * Add method POST to @app.route(‘/login’)
+  * Add method POST to @app.route(‘/login’)
        
 
-     `@app.route("/login", methods=['GET','POST'])
-      
-      def login():`
+     ```
+        @app.route("/login", methods=['GET','POST'])
+        def login():`
 
-   * Add method POST to form tag in login.html file
+  * Add method POST to form tag in login.html file
       ```<form method="post">```
 
-   RUN the code to verify that user entered data is not in the browser
+  RUN the code to verify that user entered data is not in the browser
 
 **The Form is working but is not completely functional, the form still doesn't know if  the email input is really an
 email (text contains @), the user password is visible in the entry field, the data in both fields are not required and
