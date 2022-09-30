@@ -60,7 +60,7 @@ Learning objectives:
      app.config['SECRET_KEY'] = 'Very secret string'`
 
 
-**Challenge :  Render  the LoginForm on login.html template**
+**Challenge 3:  Render  the LoginForm on login.html template**
 
   * Create an object of LoginForm to pass as an argument in render_template() with a key/value pair.
       
@@ -86,7 +86,7 @@ methods=[‘GET’,’POST’]. GET methods are by default in @app.route(). For 
 user  provides information to the server.**
 
 
-**Challenge :  Add method POST**
+**Challenge 4:  Add method POST**
 
   * Add method POST to @app.route(‘/login’)
        
@@ -106,7 +106,7 @@ email (text contains @), the user password is visible in the entry field, the da
 there is no minimum and maximum amount of characters for the password.**
 
 
-**Challenge: Instruct the form with validators argument**
+**Challenge 5: Instruct the form with validators argument**
 
    * Replace the [fields with the object class variables associated with the field](https://wtforms.readthedocs.io/en/2.3.x/fields/#wtforms.fields.StringField).
       
@@ -130,7 +130,7 @@ there is no minimum and maximum amount of characters for the password.**
 
   RUN the code to verify if the data entries are valid.
 
-**Challenge: Print user email in the console.**
+**Challenge 6: Print user email in the console.**
 
   * Establish a condition in the login function that if the data from the form  is [validate_on_submit()](https://flask-wtf.readthedocs.io/en/0.15.x/quickstart/).printed
     the user email in the console. 
@@ -155,7 +155,7 @@ there is no minimum and maximum amount of characters for the password.**
 **Now that we know that the LoginForm is receiving the data**
 
 
-**Challenge: If user enter the predetermined email and password open “success.html”, else to “denied.html”**
+**Challenge 7: If user enter the predetermined email and password open “success.html”, else to “denied.html”**
 
    * If email: “admin@test.com” and password:”12345678”. Render 'success.html'.
 
@@ -194,7 +194,7 @@ First we have to look at [Template Inheritance with Jinja2](https://flask.pallet
         </html>`
 
 
-**Challenge: Extends ‘base.html’ to ‘index.html’ and ‘login.html’**
+**Challenge 8: Extends ‘base.html’ to ‘index.html’ and ‘login.html’**
 
     `{% extends "base.html" %} `
 
@@ -203,7 +203,7 @@ First we have to look at [Template Inheritance with Jinja2](https://flask.pallet
    RUN the app to notice that there is no change on the website.
 
 
-**Challenge: Render the app with Bootstrap**
+**Challenge 9: Render the app with Bootstrap**
 
  **Follow  [Flask-Bootstrap documentation  instructions](https://pythonhosted.org/Flask-Bootstrap/basic-usage.html#):** 
 
@@ -220,7 +220,7 @@ First we have to look at [Template Inheritance with Jinja2](https://flask.pallet
 _**For next time  rather than type the whole code in <form> tag, there is a [WTForms support in Flask_Bootstrap](https://pythonhosted.org/Flask-Bootstrap/forms.html) that just
 with one line of code the LoginForm is rendered in the login.html template.**_
 
-   * Challenge: Uncomment all the code inside `<form> </form>` and replaced the form with ‘wtf.quick_form’
+   **Challenge 10: Uncomment all the code inside `<form> </form>` and replaced the form with ‘wtf.quick_form’**
 
    * Import the bootstrap/wtf.html at the top of login.html
         `{% import "bootstrap/wtf.html" as wtf %}`
