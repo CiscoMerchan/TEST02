@@ -40,8 +40,8 @@ Learning objectives:
        from wtforms import StringField,SubmitField```
 
 
-  * Create a class object call LoginForm that inherits from class FlaskForm and define the fields in the form with 
-    wtforms class variables :
+* Create a class object call LoginForm that inherits from class FlaskForm and define the fields in the form with 
+  wtforms class variables :
   
    
     ```
