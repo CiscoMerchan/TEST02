@@ -44,9 +44,9 @@ Learning objectives:
   
    
     ```class LoginForm(FlaskForm):
-        email = StringField(label='email')
-        password = StringField(label='password')
-        submit = SubmitField(label='Log')```
+         email = StringField(label='email')
+         password = StringField(label='password')
+         submit = SubmitField(label='Log')```
 	
 #By default, WTForm  protects all forms against [Cross-Site Request Forgery (CSRF)](https://flask-wtf.readthedocs.io/en/1.0.x/csrf/#html-forms) attacks. To implement CSRF protection.
 	 
