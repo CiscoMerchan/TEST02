@@ -142,7 +142,9 @@ there is no minimum and maximum amount of characters for the password.**
    RUN the code to verify if the user email is printed in the console.
 
 **Now that we know that the LoginForm is receiving the data**
-#Challenge: If user enter the predetermined email and password open “success.html”, else to “denied.html”
+
+
+**Challenge: If user enter the predetermined email and password open “success.html”, else to “denied.html”**
 
    * If email: “admin@test.com” and password:”12345678”. Render 'success.html'.
 
@@ -179,7 +181,7 @@ First we have to look at [Template Inheritance with Jinja2](https://flask.pallet
         </body>
         </html>`
 
-#Challenge: Extends ‘base.html’ to ‘index.html’ and ‘login.html’
+**Challenge: Extends ‘base.html’ to ‘index.html’ and ‘login.html’**
 
     `{% extends "base.html" %} `
 
@@ -188,7 +190,7 @@ First we have to look at [Template Inheritance with Jinja2](https://flask.pallet
    RUN the app to notice that there is no change on the website.
 
 
-#Challenge: Render the app with Bootstrap
+**Challenge: Render the app with Bootstrap**
 
  **Follow  [Flask-Bootstrap documentation  instructions](https://pythonhosted.org/Flask-Bootstrap/basic-usage.html#):** 
 
