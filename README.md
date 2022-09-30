@@ -49,21 +49,22 @@ Learning objectives:
          password = StringField(label='password')
          submit = SubmitField(label='Log')```
 	
-#By default, WTForm  protects all forms against [Cross-Site Request Forgery (CSRF)](https://flask-wtf.readthedocs.io/en/1.0.x/csrf/#html-forms) attacks. To implement CSRF protection.
+**By default, WTForm  protects all forms against [Cross-Site Request Forgery (CSRF)](https://flask-wtf.readthedocs.io/en/1.0.x/csrf/#html-forms) attacks. To implement CSRF protection.**
 	 
 
     `app = Flask(__name__)
      app.config['SECRET_KEY'] = 'Very secret string'`
 
-#Challenge :  Render  the LoginForm on login.html template
+**Challenge :  Render  the LoginForm on login.html template**
 
   * Create an object of LoginForm to pass as an argument in render_template() with a key/value pair.
       
-      `@app.route("/login")
-        def login():
+      ```
+         @app.route("/login")
+         def login():
            form = LoginForm()
 
-           return render_template('login.html',form=form)`
+           return render_template('login.html',form=form)```
 
     * Render form in login.html
     
