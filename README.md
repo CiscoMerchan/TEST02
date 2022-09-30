@@ -48,13 +48,13 @@ Learning objectives:
          password = StringField(label='password')
          submit = SubmitField(label='Log')`
 	
-###By default, WTForm  protects all forms against [Cross-Site Request Forgery (CSRF)](https://flask-wtf.readthedocs.io/en/1.0.x/csrf/#html-forms) attacks. To implement CSRF protection.
+#By default, WTForm  protects all forms against [Cross-Site Request Forgery (CSRF)](https://flask-wtf.readthedocs.io/en/1.0.x/csrf/#html-forms) attacks. To implement CSRF protection.
 	 
 
     `app = Flask(__name__)
      app.config['SECRET_KEY'] = 'Very secret string'`
 
-###Challenge :  Render  the LoginForm on login.html template
+#Challenge :  Render  the LoginForm on login.html template
 
   * Create an object of LoginForm to pass as an argument in render_template() with a key/value pair.
       
@@ -77,7 +77,7 @@ Learning objectives:
 methods=[‘GET’,’POST’]. GET methods are by default in @app.route(). For security reasons we do POST requests when the
 user  provides information to the server.**
 
-###Challenge :  Add method POST
+#Challenge :  Add method POST
 
    * Add method POST to @app.route(‘/login’)
        
@@ -95,7 +95,7 @@ user  provides information to the server.**
 email (text contains @), the user password is visible in the entry field, the data in both fields are not required and
 there is no minimum and maximum amount of characters for the password.**
 
-###Challenge: Instruct the form with validators argument
+#Challenge: Instruct the form with validators argument
 
    * Replace the [fields with the object class variables associated with the field](https://wtforms.readthedocs.io/en/2.3.x/fields/#wtforms.fields.StringField).
       
@@ -104,7 +104,7 @@ there is no minimum and maximum amount of characters for the password.**
 
    * Install [wtforms.validators](https://flask-wtf.readthedocs.io/en/1.0.x/quickstart/#validating-forms) and give it an optional validator to ensure that the field is not submitted empty 
       and a length for the password.
-     `from wtforms.validators import [DataRequired](https://wtforms.readthedocs.io/en/2.3.x/validators/#wtforms.validators.DataRequired), Length`
+   `from wtforms.validators import DataRequired, Length`
 
    * Make the necessary changes in LoginForm class
     
@@ -118,7 +118,7 @@ there is no minimum and maximum amount of characters for the password.**
 
    RUN the code to verify if the data entries are valid.
 
-###Challenge: Print user email in the console.
+#Challenge: Print user email in the console.
 
    * Establish a condition in the login function that if the data from the form  is [validate_on_submit()](https://flask-wtf.readthedocs.io/en/0.15.x/quickstart/).printed
      the user email in the console. 
@@ -139,7 +139,7 @@ there is no minimum and maximum amount of characters for the password.**
    RUN the code to verify if the user email is printed in the console.
 
 **Now that we know that the LoginForm is receiving the data**
-###Challenge: If user enter the predetermined email and password open “success.html”, else to “denied.html”
+#Challenge: If user enter the predetermined email and password open “success.html”, else to “denied.html”
 
    * If email: “admin@test.com” and password:”12345678”. Render 'success.html'.
 
@@ -176,7 +176,7 @@ First we have to look at [Template Inheritance with Jinja2](https://flask.pallet
         </body>
         </html>`
 
-###Challenge: Extends ‘base.html’ to ‘index.html’ and ‘login.html’
+#Challenge: Extends ‘base.html’ to ‘index.html’ and ‘login.html’
 
     `{% extends "base.html" %} `
 
@@ -185,7 +185,7 @@ First we have to look at [Template Inheritance with Jinja2](https://flask.pallet
    RUN the app to notice that there is no change on the website.
 
 
-###Challenge: Render the app with Bootstrap
+#Challenge: Render the app with Bootstrap
 
  **Follow  [Flask-Bootstrap documentation  instructions](https://pythonhosted.org/Flask-Bootstrap/basic-usage.html#):** 
 
