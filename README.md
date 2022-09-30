@@ -104,7 +104,7 @@ there is no minimum and maximum amount of characters for the password.**
 
    * Install [wtforms.validators](https://flask-wtf.readthedocs.io/en/1.0.x/quickstart/#validating-forms) and give it an optional validator to ensure that the field is not submitted empty 
       and a length for the password.
-     `from wtforms.validators import DataRequired, Length`
+     `from wtforms.validators import [DataRequired](https://wtforms.readthedocs.io/en/2.3.x/validators/#wtforms.validators.DataRequired), Length`
 
    * Make the necessary changes in LoginForm class
     
@@ -132,7 +132,7 @@ there is no minimum and maximum amount of characters for the password.**
 
             return render_template('login.html',form=form)`
 
-   * Add to  `<form>` the data from must be given action with and endpoint to redirect the data to the login function using Jinja2 {{ url_for() }}
+   * Add to  `<form>` the data from must be given action with an endpoint to redirect the data to the login function using Jinja2 {{ url_for() }}
     
     ` <form method="post" action="{{url_for('login')}}">`
 
