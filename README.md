@@ -35,9 +35,9 @@ Learning objectives:
 * Install flask_wtf and wtforms:
    
 
-  ```from flask_wtf import FlaskForm
+  ``from flask_wtf import FlaskForm
 
-     from wtforms import StringField,SubmitField```
+    from wtforms import StringField,SubmitField``
 
 
   * Create a class object call LoginForm that inherits from class FlaskForm and define the fields in the form with 
