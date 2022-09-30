@@ -1,6 +1,7 @@
-#Create a Login form with FlaskForm
+**Create a Login form with FlaskForm**
 
 *The end result : [https://github.com/CiscoRostam/login-with-Flask.git](https://github.com/CiscoRostam/login-with-Flask)
+
 
 References:
     * [Flask-WTF](https://flask-wtf.readthedocs.io/en/1.0.x/)
@@ -17,6 +18,7 @@ Learning objectives:
 **Install [Flask-WTF](https://flask-wtf.readthedocs.io/en/1.0.x/install/#development)**
 * pip install -U Flask-WTF
 
+
 **Challenge 1: Create a route “/login” that when the user clicks on “Login” will open the ‘login.html’**
 
    * Create an app decorator route with “/login”
@@ -32,12 +34,14 @@ Learning objectives:
 
 **Challenge 2:  In main.py create a Form with WTForm([FlaskForm](https://flask-wtf.readthedocs.io/en/0.15.x/form/))**
 
+
 * Install flask_wtf and wtforms:
    
 
     ```
        from flask_wtf import FlaskForm
        from wtforms import StringField,SubmitField```
+
 
 * Create a class object call LoginForm that inherits from class FlaskForm and define the fields in the form with 
   wtforms class variables :
@@ -49,11 +53,13 @@ Learning objectives:
          password = StringField(label='password')
          submit = SubmitField(label='Log')```
 	
+
 **By default, WTForm  protects all forms against [Cross-Site Request Forgery (CSRF)](https://flask-wtf.readthedocs.io/en/1.0.x/csrf/#html-forms) attacks. To implement CSRF protection.**
 	 
 
     `app = Flask(__name__)
      app.config['SECRET_KEY'] = 'Very secret string'`
+
 
 **Challenge :  Render  the LoginForm on login.html template**
 
@@ -75,9 +81,11 @@ Learning objectives:
           {{ form.submit }}
           </form>``` 
 
+
 **HTTP Methods: To establish communication between the user and the servers, Flask routing decorator uses 
 methods=[‘GET’,’POST’]. GET methods are by default in @app.route(). For security reasons we do POST requests when the
 user  provides information to the server.**
+
 
 **Challenge :  Add method POST**
 
@@ -93,11 +101,13 @@ user  provides information to the server.**
 
   RUN the code to verify that user entered data is not in the browser
 
+
 **The Form is working but is not completely functional, the form still doesn't know if  the email input is really an
 email (text contains @), the user password is visible in the entry field, the data in both fields are not required and
 there is no minimum and maximum amount of characters for the password.**
 
-#Challenge: Instruct the form with validators argument
+
+**Challenge: Instruct the form with validators argument**
 
    * Replace the [fields with the object class variables associated with the field](https://wtforms.readthedocs.io/en/2.3.x/fields/#wtforms.fields.StringField).
       
@@ -118,7 +128,8 @@ there is no minimum and maximum amount of characters for the password.**
                                  Length(min=8, max=20)])
          submit = SubmitField(label='Log')`
 
-   RUN the code to verify if the data entries are valid.
+
+  RUN the code to verify if the data entries are valid.
 
 **Challenge: Print user email in the console.**
 
@@ -141,6 +152,7 @@ there is no minimum and maximum amount of characters for the password.**
 
    RUN the code to verify if the user email is printed in the console.
 
+
 **Now that we know that the LoginForm is receiving the data**
 
 
@@ -161,6 +173,7 @@ there is no minimum and maximum amount of characters for the password.**
                       return render_template('denied.html')
             return render_template('login.html',form=form)`
 
+  
    RUN the code to verify if the right email and password open 'success.html' and e if the user entries are different 
    from the predetermined condition  in the login function the 'denied.html' opens.
 
@@ -180,6 +193,7 @@ First we have to look at [Template Inheritance with Jinja2](https://flask.pallet
                {% block content%}{% endblock %}
         </body>
         </html>`
+
 
 **Challenge: Extends ‘base.html’ to ‘index.html’ and ‘login.html’**
 
