@@ -43,7 +43,8 @@ Learning objectives:
     wtforms class variables :
   
    
-    ```class LoginForm(FlaskForm):
+    ```
+       class LoginForm(FlaskForm):
          email = StringField(label='email')
          password = StringField(label='password')
          submit = SubmitField(label='Log')```
