@@ -16,10 +16,6 @@ Learning objectives:
     * flask_bootstrap
 
 
-**Install [Flask-WTF](https://flask-wtf.readthedocs.io/en/1.0.x/install/#development)**
-* pip install -U Flask-WTF
-
-
 **Challenge 1: Create a route “/login” that when the user clicks on “Login” will open the ‘login.html’**
 
    * Create an app decorator route with “/login”
