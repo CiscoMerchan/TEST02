@@ -4,10 +4,11 @@
 
 
 References:
-    * [Flask-WTF](https://flask-wtf.readthedocs.io/en/1.0.x/)
-    * [https://jinja.palletsprojects.com/en/3.1.x/templates/#import-context-behavior](https://jinja.palletsprojects.com/en/3.1.x/templates/#import-context-behavior)
+   * [Flask-WTF](https://flask-wtf.readthedocs.io/en/1.0.x/)
+   
+   * [https://jinja.palletsprojects.com/en/3.1.x/templates/#import-context-behavior](https://jinja.palletsprojects.com/en/3.1.x/templates/#import-context-behavior)
 
-Learning objectives:
+   **Learning objectives:**
 
   * Create a web application with login form using:
     * Flask 
@@ -25,7 +26,7 @@ Learning objectives:
    * Add an [url_for()](https://tedboy.github.io/flask/generated/flask.url_for.html) mapped to ‘login’ function in the anchor <a> tag, like this when the user clicks on Login  
       button the user will be redirect to ‘login.html’
 
-   Refresh the browser and click on the Login button.     
+   - Refresh the browser and click on the Login button.     
 
 
 
@@ -95,7 +96,7 @@ user  provides information to the server.**
   * Add method POST to form tag in login.html file
       ```<form method="post">```
 
-  RUN the code to verify that user entered data is not in the browser
+   - RUN the code to verify that user entered data is not in the browser
 
 
 **The Form is working but is not completely functional, the form still doesn't know if  the email input is really an
@@ -125,7 +126,7 @@ there is no minimum and maximum amount of characters for the password.**
          submit = SubmitField(label='Log')`
 
 
-  RUN the code to verify if the data entries are valid.
+  - RUN the code to verify if the data entries are valid.
 
 **Challenge 6: Print user email in the console.**
 
@@ -146,7 +147,7 @@ there is no minimum and maximum amount of characters for the password.**
     
     ` <form method="post" action="{{url_for('login')}}">`
 
-   RUN the code to verify if the user email is printed in the console.
+   - RUN the code to verify if the user email is printed in the console.
 
 
 **Now that we know that the LoginForm is receiving the data**
@@ -170,7 +171,7 @@ there is no minimum and maximum amount of characters for the password.**
             return render_template('login.html',form=form)`
 
   
-   RUN the code to verify if the right email and password open 'success.html' and e if the user entries are different 
+   - RUN the code to verify if the right email and password open 'success.html' and e if the user entries are different 
    from the predetermined condition  in the login function the 'denied.html' opens.
 
 **Now the form is functional but will be nice to some styles on index.html and login.html  by using Bootstrap 
@@ -197,7 +198,7 @@ First we have to look at [Template Inheritance with Jinja2](https://flask.pallet
 
    * Replace in ‘index.html’ and ‘login.html’ the <title> and <body> tag for {% block … %} and {% endblock%} .
 
-   RUN the app to notice that there is no change on the website.
+   - RUN the app to notice that there is no change on the website.
 
 
 **Challenge 9: Render the app with Bootstrap**
@@ -210,7 +211,7 @@ First we have to look at [Template Inheritance with Jinja2](https://flask.pallet
 
    * Extend bootstrap to index.html and login.html
 
-   Refresh the app in the browser and see the change on the presentation.
+   - Refresh the app in the browser and see the change on the presentation.
 
 **Now, everything looks good but still one extra thing to take total advantage of Flask_Bootstrap in this app.**
 
@@ -224,4 +225,4 @@ with one line of code the LoginForm is rendered in the login.html template.**_
 
    * Below to uncomment `<form></form>` tag. Type: `{{ wtf.quick_form(form) }}`
 
-   Refresh the browser and see the result.
+   - Refresh the browser and see the result.
