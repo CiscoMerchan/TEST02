@@ -9,10 +9,11 @@ References:
 
 Learning objectives:
 
-   * Use Python virtual environments in PyCharm Community Edition IDE
-   * Use git to check out source from a code repository and move between branches
-   * Create a web application login form using python, flask, FlaskForm(with validators), Template Inheritance with
-     Jinja2 and flask_bootstrap.
+  * Create a web application with login form using:
+    * Flask 
+    * FlaskForm class(with validators)
+    * Template Inheritance with Jinja2 
+    * flask_bootstrap
 
 
 **Install [Flask-WTF](https://flask-wtf.readthedocs.io/en/1.0.x/install/#development)**
