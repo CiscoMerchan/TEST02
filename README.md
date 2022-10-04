@@ -221,8 +221,7 @@ uses extends statement to inherit or extends the base templates. Lets the exampl
  	{% endblock %}`
 
  
-  
-**Challenge 8: Render the app with Bootstrap**
+ **Challenge 8: Render the app with Bootstrap**
 
  **Follow  [Flask-Bootstrap documentation  instructions](https://pythonhosted.org/Flask-Bootstrap/basic-usage.html#):** 
 
