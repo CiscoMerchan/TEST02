@@ -235,7 +235,7 @@ uses extends statement to inherit or extends the base templates. Lets the exampl
 
 **Now, everything looks good but still one extra thing to take total advantage of Flask_Bootstrap in this app.**
 
-_**For next time  rather than type the whole code in `'<form>'` tag, there is a [WTForms support in Flask_Bootstrap](https://pythonhosted.org/Flask-Bootstrap/forms.html) that just
+_**For next time  rather than type the whole code inside a `'<form>'` tag, there is a [WTForms support in Flask_Bootstrap](https://pythonhosted.org/Flask-Bootstrap/forms.html) that just
 with one line of code the LoginForm is rendered in the login.html template.**_
 
 
