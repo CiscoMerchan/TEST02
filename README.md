@@ -7,7 +7,7 @@ References:
 
    * [Flask-WTF](https://flask-wtf.readthedocs.io/en/1.0.x/)
    
-   * [https://jinja.palletsprojects.com/en/3.1.x/templates/#import-context-behavior](https://jinja.palletsprojects.com/en/3.1.x/templates/#import-context-behavior)
+   * Jinja2 engine [https://jinja.palletsprojects.com/en/3.1.x/templates/#import-context-behavior](https://jinja.palletsprojects.com/en/3.1.x/templates/#import-context-behavior)
 
    **Learning objectives:**
 
@@ -25,7 +25,7 @@ References:
    * Create a login function that render the “login.html” template. 
 
    * Add an [url_for()](https://tedboy.github.io/flask/generated/flask.url_for.html) mapped to ‘login’ function in the anchor <a> tag, like this when the user clicks on Login  
-      button the user will be redirect to ‘login.html’
+      button the user will be redirected to ‘login.html’
 
    - Refresh the browser and click on the Login button.     
 
@@ -181,6 +181,11 @@ files are available in the app. This template takes advantage of Jinja2 template
 
 First we have to look at [Template Inheritance with Jinja2](https://flask.palletsprojects.com/en/2.2.x/patterns/templateinheritance/)
 
+Template Inheritance is one of the most powerful aspects of Jinja Templating. The idea behind template inheritance is 
+somewhat similar to Object-Oriented Programming. We start by creating a base template which contains the HTML skeleton 
+and markers that child template can override. The markers are created using the block statement. The child templates 
+uses extends statement to inherit or extends the base templates. Lets the example from the 'base.html' file:
+
         `<!DOCTYPE html>
         <html lang="en">
         <head>
@@ -193,16 +198,29 @@ First we have to look at [Template Inheritance with Jinja2](https://flask.pallet
         </html>`
 
 
-**Challenge 8: Extends ‘base.html’ to ‘index.html’ and ‘login.html’**
+**So you can see in 'index.html' and 'login.html' file are already configured as child templates from 'base.html' file.
+    E.g. 'index.html':**
 
-    `{% extends "base.html" %} `
+    `
+    {% extends 'base.html' %}
 
-   * Replace in ‘index.html’ and ‘login.html’ the <title> and <body> tag for {% block … %} and {% endblock%} .
+	{% block title %}Secrets{% endblock %}
 
-   - RUN the app to notice that there is no change on the website.
+	{% block content %}
 
+    <div class="jumbotron">
+	<div class="container">
+		<h1>Welcome</h1>
+		<p>Are you ready to discover my secret?</p>
+		<a href="{{url_for('login')}}">
+		<button class="btn btn-primary btn-lg" type="submit">Login</button>
+		</a>
+	</div>
+    </div>
+ 	{% endblock %}`
 
-**Challenge 9: Render the app with Bootstrap**
+   
+**Challenge 8: Render the app with Bootstrap**
 
  **Follow  [Flask-Bootstrap documentation  instructions](https://pythonhosted.org/Flask-Bootstrap/basic-usage.html#):** 
 
@@ -219,7 +237,7 @@ First we have to look at [Template Inheritance with Jinja2](https://flask.pallet
 _**For next time  rather than type the whole code in <form> tag, there is a [WTForms support in Flask_Bootstrap](https://pythonhosted.org/Flask-Bootstrap/forms.html) that just
 with one line of code the LoginForm is rendered in the login.html template.**_
 
-   **Challenge 10: Uncomment all the code inside `<form> </form>` and replaced the form with ‘wtf.quick_form’**
+   **Challenge 9: Uncomment all the code inside `<form> </form>` and replaced the form with ‘wtf.quick_form’**
 
    * Import the bootstrap/wtf.html at the top of login.html
         `{% import "bootstrap/wtf.html" as wtf %}`
