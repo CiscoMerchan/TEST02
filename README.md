@@ -24,11 +24,10 @@ References:
 
    * Create a login function to render the “login.html” template. 
 
-     - In Jinja double curly **{{ }}** braces allows us to evaluate an expression, variable or function call and print the 
+     - In Jinja double curly **`{{ }}`** braces allows us to evaluate an expression, variable or function call and print the 
        result into the template.
    * Add an [url_for()](https://tedboy.github.io/flask/generated/flask.url_for.html) mapped to ‘login’ function in 
-     the _href=" "_ inside the anchor <a> tag that is in "index.html" , like this when the user clicks on Login  
-     button the user will be redirected to "login.html".
+     the _href=" "_ inside the anchor <a> tag that is in "index.html" , like this when the user clicks on Login button the user will be redirected to "login.html".
 
    - Refresh the browser and click on the Login button.     
 
