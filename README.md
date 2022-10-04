@@ -181,7 +181,7 @@ files are available in the app. This template takes advantage of Jinja2 template
 
 First we have to look at [Template Inheritance with Jinja2](https://flask.palletsprojects.com/en/2.2.x/patterns/templateinheritance/)
 
-Template Inheritance is one of the most powerful aspects of Jinja Templating. The idea behind template inheritance is 
+**_Template Inheritance_** is one of the most powerful aspects of Jinja Templating. The idea behind template inheritance is 
 somewhat similar to Object-Oriented Programming. We start by creating a base template which contains the HTML skeleton 
 and markers that child template can override. The markers are created using the block statement. The child templates 
 uses extends statement to inherit or extends the base templates. Lets the example from the 'base.html' file:
@@ -198,8 +198,8 @@ uses extends statement to inherit or extends the base templates. Lets the exampl
         </html>`
 
 
-**So you can see in 'index.html' and 'login.html' file are already configured as child templates from 'base.html' file.
-    E.g. 'index.html':**
+   **So you can see in 'index.html' and 'login.html' file are already configured as child templates from 'base.html' file.
+     E.g. 'index.html':**
 
     `
     {% extends 'base.html' %}
@@ -219,7 +219,8 @@ uses extends statement to inherit or extends the base templates. Lets the exampl
     </div>
  	{% endblock %}`
 
-   
+ 
+  
 **Challenge 8: Render the app with Bootstrap**
 
  **Follow  [Flask-Bootstrap documentation  instructions](https://pythonhosted.org/Flask-Bootstrap/basic-usage.html#):** 
@@ -234,8 +235,9 @@ uses extends statement to inherit or extends the base templates. Lets the exampl
 
 **Now, everything looks good but still one extra thing to take total advantage of Flask_Bootstrap in this app.**
 
-_**For next time  rather than type the whole code in <form> tag, there is a [WTForms support in Flask_Bootstrap](https://pythonhosted.org/Flask-Bootstrap/forms.html) that just
+_**For next time  rather than type the whole code in `'<form>'` tag, there is a [WTForms support in Flask_Bootstrap](https://pythonhosted.org/Flask-Bootstrap/forms.html) that just
 with one line of code the LoginForm is rendered in the login.html template.**_
+
 
    **Challenge 9: Uncomment all the code inside `<form> </form>` and replaced the form with ‘wtf.quick_form’**
 
