@@ -22,10 +22,13 @@ References:
 
    * Create an app decorator route with “/login”
 
-   * Create a login function that render the “login.html” template. 
+   * Create a login function to render the “login.html” template. 
 
-   * Add an [url_for()](https://tedboy.github.io/flask/generated/flask.url_for.html) mapped to ‘login’ function in the anchor <a> tag, like this when the user clicks on Login  
-      button the user will be redirected to ‘login.html’
+     - In Jinja double curly **{{ }}** braces allows us to evaluate an expression, variable or function call and print the 
+       result into the template.
+   * Add an [url_for()](https://tedboy.github.io/flask/generated/flask.url_for.html) mapped to ‘login’ function in 
+     the _href=" "_ inside the anchor <a> tag that is in "index.html" , like this when the user clicks on Login  
+     button the user will be redirected to "login.html".
 
    - Refresh the browser and click on the Login button.     
 
@@ -81,7 +84,7 @@ References:
 
 
 **HTTP Methods: To establish communication between the user and the servers, Flask routing decorator uses 
-methods=[‘GET’,’POST’]. GET methods are by default in @app.route(). For security reasons we do POST requests when the
+methods=[‘GET’,’POST’]. _GET_ methods are by default in @app.route(). For security reasons we do _POST_ requests when the
 user  provides information to the server.**
 
 
@@ -97,9 +100,7 @@ user  provides information to the server.**
   * Add method POST to form tag in login.html file
       ```<form method="post">```
 
-   - RUN the code to verify that user entered data is not in the browser
-
-
+  
 **The Form is working but is not completely functional, the form still doesn't know if  the email input is really an
 email (text contains @), the user password is visible in the entry field, the data in both fields are not required and
 there is no minimum and maximum amount of characters for the password.**
