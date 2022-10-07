@@ -24,8 +24,9 @@ References:
 
    * Create a login function to render the “login.html” template. 
 
-     - In Jinja double curly **`{{ }}`** brackets allows us to evaluate an expression, variable or function call and print the 
-       result into the template.
+     - Jinja looks and behaves mostly like Python. Special delimiters are used to distinguish Jinja syntax from the 
+       static data in the HTML template for that we used double curly **`{{ }}`** brackets allows us to evaluate an 
+       expression, variable or function call.
    * Add an [url_for()](https://tedboy.github.io/flask/generated/flask.url_for.html) mapped to ‘login’ function in 
      the _href=" "_ inside the anchor <a> tag that is in "index.html" , like this when the user clicks on Login button the user will be redirected to "login.html".
 
