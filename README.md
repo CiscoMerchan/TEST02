@@ -1,11 +1,13 @@
 # Create a Login form with FlaskForm 
 
-*The end result : [https://github.com/CiscoMerchan/login-with-Flask](https://github.com/CiscoMerchan/login-with-Flask)
 
 To follow with the [video](https://www.youtube.com/watch?v=eY7pSCeF_Rg) please install:
-    *[Python 3.9 or later](https://www.python.org/downloads/)
-    *git 
-    *[Pycharm Community Edition 2022.2](https://www.jetbrains.com/pycharm/download/#section=windows)
+    
+   *[Python 3.9 or later](https://www.python.org/downloads/)
+
+   *git 
+
+   *[Pycharm Community Edition 2022.2](https://www.jetbrains.com/pycharm/download/#section=windows)
 
 References:
 
@@ -251,3 +253,8 @@ with one line of code the LoginForm is rendered in the login.html template.**_
    * Below to uncomment `<form></form>` tag. Type: `{{ wtf.quick_form(form) }}`
 
    - Refresh the browser and see the result.
+
+
+
+***The end result** : [https://github.com/CiscoMerchan/login-with-Flask](https://github.com/CiscoMerchan/login-with-Flask)
+
