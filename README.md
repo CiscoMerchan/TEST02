@@ -1,7 +1,11 @@
 **Create a Login form with FlaskForm**
 
-*The end result : [https://github.com/CiscoRostam/login-with-Flask.git](https://github.com/CiscoRostam/login-with-Flask)
+*The end result : [https://github.com/CiscoMerchan/login-with-Flask](https://github.com/CiscoMerchan/login-with-Flask)
 
+To follow with the [video](https://www.youtube.com/watch?v=eY7pSCeF_Rg) please install:
+    *[Python 3.9 or later](https://www.python.org/downloads/)
+    *git 
+    *[Pycharm Community Edition 2022.2](https://www.jetbrains.com/pycharm/download/#section=windows)
 
 References:
 
